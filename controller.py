@@ -1,15 +1,16 @@
-from pickle import TRUE
-import functions as f
-import gui
+import functions.general_func as generalf
+import functions.txt_func as txtf
+import functions.csv_func as csvf
+import functions.sql_func as sqlf
 
 def button_click():
-    while TRUE:
-        match f.choose_type():
+    while True:
+        match generalf.choose_type():
             case '.db':
-                f.type_sql()
+                sqlf.type_sql()
             case '.txt':
-                f.type_txt()
+                txtf.type_txt()
             case '.csv':
-                f.type_csv()
+                csvf.type_csv()
             case 'exit':
                 return
